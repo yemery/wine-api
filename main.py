@@ -5,7 +5,7 @@ from scraper import *
 app=Flask(__name__)
 api=Api(app)
 
-@app.route('/')
+@app.route('/data')
 def getdata():
     myfun=csv_into_json()
     return json.dumps(myfun,indent=4)
